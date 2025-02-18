@@ -5,7 +5,7 @@
 namespace Mission6AssignmentMovies.Migrations
 {
     /// <inheritdoc />
-    public partial class makenull : Migration
+    public partial class nulls4 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Mission6AssignmentMovies.Models;
 
@@ -10,21 +11,22 @@ using Mission6AssignmentMovies.Models;
 namespace Mission6AssignmentMovies.Migrations
 {
     [DbContext(typeof(MovieContext))]
-    partial class MovieContextModelSnapshot : ModelSnapshot
+    [Migration("20250218205231_nulls3")]
+    partial class nulls3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.1");
 
             modelBuilder.Entity("Mission6AssignmentMovies.Models.Category", b =>
                 {
-                    b.Property<int>("CategoryId")
+                    b.Property<int?>("CategoryId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("CategoryName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("CategoryId");
